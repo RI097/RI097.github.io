@@ -1,0 +1,315 @@
+*{
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #1e1d1d;
+    box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+a.nav-design
+{
+padding: 15px 10px 15px 10px;
+margin: 15px;
+
+}
+
+.navbar{
+    padding: 5px;
+}
+
+a.nav-name{
+font-family: 'Sacramento', cursive;
+  font-size: 24px;
+  font-weight: 600;
+ 
+}
+
+.navbar-light .navbar-brand{
+    color: #4e4d4d;
+}
+
+
+  .navbar-nav .nav-item :hover {
+    background-color: #B980FF!important;
+  }
+
+  
+  .item {
+    display: inline-block;
+  }
+  /* on PC */
+  @media screen and (min-width: 550px) {
+    .featured-image {
+      float: left;
+      width: 40%;
+      padding-right: 15px;
+    }
+    .featured-image img {
+      width: 100%;
+    }
+    .description {
+      float: left;
+      width: 60%;
+    }
+  }
+  /* on Mobile */
+  @media screen and (max-width: 550px) {
+    .featured-image {
+      width: 100%;
+    }
+    .featured-image img {
+      width: 100%;
+    }
+    .description {
+      width: 100%;
+    }
+  }
+  
+  span.design {
+       /* text-transform: uppercase; */
+      background-image: linear-gradient(
+        to right,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 5s linear infinite;
+      display: inline-block;
+          /* font-size: 2rem; */
+    }
+    
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .dikshita{
+        font-size: 32px;
+        padding-bottom: 20px;
+        font-weight: 600;
+    }
+
+    h2{
+        font-size: 24px;
+        line-height: 1.6;
+    }
+  
+  
+    
+.flex-parent {
+    display: flex;
+  }
+  .flex-child {
+    flex: 1;
+  }
+  /* base css */
+  body {
+    padding: 2rem 3rem;
+
+  }
+  h3 {
+    margin: 1.5rem 0 .25em;
+    clear: both;
+  }
+  .parent {
+    /* background: mediumpurple; */
+    padding: 1rem;
+    margin-bottom: 100px;
+  }
+  .child {
+    /* border: 1px solid indigo; */
+    padding: 1rem;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+/* css of the project cards */
+
+.card{
+    margin: 5% 0%;
+  }
+  
+  .card-body{
+    margin: 0% 0% 0% 3%;
+    padding: 6% 0%;
+  }
+  
+  .card:hover {
+      box-shadow: 0px 32px 60px rgba(0, 0, 0, 0.16);
+      transform: translate(0px, -12px) !important;
+      transition-delay: 0s !important;
+      -webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+      -moz-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+      transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    }
+
+
+    /* card content css */
+    .card-title {
+        /* portfolio-walker-thumbnail: */
+        /* Mirror Mirror: */
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 24px;
+        color: #000;
+        margin-bottom: 8px;
+      }
+    
+      .card-subtitle {
+        /* UX Design, UX Resear: */
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        color: #555555;
+        margin-bottom: 20px;
+      }
+    
+      .card-content {
+        /* Cultivating Mindfuln: */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        font-size: 16px;
+        color: #000;
+        line-height: 22px;
+      }
+/* card css end   */
+/* card container css */
+.container{
+    margin-bottom: 30px;
+}
+
+
+/* footer css start */
+.footer p a {
+    color: #000000;
+    text-align: center;
+    font-size: 22px;
+    padding: 8px;
+  
+  }
+  
+  .footer p a:hover, .footer p a:focus {
+    text-decoration: none;
+  }
+  .footer-row {
+    margin: 30px 10px 10px 10px;
+    color:#000000;
+    position: relative;
+    z-index: 0;
+    font-weight: 500px;
+  }
+
+  
+  .footer-row i {
+    color: #000000;
+  }
+  
+  .footer-row i:hover {
+    color:#000000;
+    opacity: 0.5;
+  }
+  .foot{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 40px 40px 0px 40px;
+    border: #000000 20px;
+  }
+  
+
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      color:#000000;
+      text-align: center;
+    }
+  
+    .footer-text-small {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      color: #000000;
+      text-align: center;
+      font-size: 10px;
+    }
+  
+    .footer-icons p {
+      text-align: center;
+    }
+  
+    .footer-icons i {
+      padding: 12px 12px 0px 12px;
+    }
+  
+/* footer css end */
+/* about me page start   */
+
+/* display this row with flex and use wrap (= respect columns' widths) */
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* vertical spacing between columns */
+
+[class*="col-"] {
+  margin-bottom: 30px;
+}
+
+.content {
+  height: 100%;
+  padding: 20px 20px 10px;
+  color: #000;
+}
+
+
+
+
+
+body {
+  padding: 20px 0;
+ 
+}
+
+.content h3 {
+  margin-top: 0px;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.content-box-side .about-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #A149FA;
+  
+}
+.about-subtitle{
+  text-decoration: underline;
+}
+
+a.sub{
+  font-weight: 600;
+}
+
+a.sub:hover{
+  text-decoration: underline;
+  color: #A149FA;
+}
+/* about me page end */

@@ -1,14 +1,20 @@
 *{
-    background-color: #ffffff;
+    background-color: transparent;
     font-family: 'Montserrat', sans-serif;
     color: #1e1d1d;
     box-sizing: border-box;
 }
 
+
+
 a{
   text-decoration: none;
 }
 
+
+a.nav-link{
+  font-size: 16px;
+}
 a.nav-design
 {
 padding: 15px 10px 15px 10px;
@@ -17,7 +23,8 @@ margin: 15px;
 }
 
 .navbar{
-    padding: 5px;
+    padding: 15px;
+   
 }
 
 a.nav-name{
@@ -56,7 +63,7 @@ font-family: 'Sacramento', cursive;
     }
   }
   /* on Mobile */
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 787px) {
     .featured-image {
       width: 100%;
     }
@@ -118,6 +125,8 @@ font-family: 'Sacramento', cursive;
   /* base css */
   body {
     padding: 2rem 3rem;
+  
+    
 
   }
   h3 {
@@ -165,6 +174,7 @@ font-family: 'Sacramento', cursive;
         font-size: 24px;
         color: #000;
         margin-bottom: 8px;
+        font-weight: 600;
       }
     
       .card-subtitle {
@@ -182,6 +192,10 @@ font-family: 'Sacramento', cursive;
         font-size: 16px;
         color: #000;
         line-height: 22px;
+      }
+
+      p.card-text{
+        font-weight: 500;
       }
 /* card css end   */
 /* card container css */
@@ -313,3 +327,91 @@ a.sub:hover{
   color: #A149FA;
 }
 /* about me page end */
+
+/* media query for photos and text next to each other */
+
+
+@media screen and (max-width: 1200px) {
+  img.gif {
+      display: inline-block;
+      width: 50%;
+      /* float: right; */
+ 
+  }
+}
+
+@media screen and (max-width: 360px) {
+  img.gif {
+      display: block;
+      width: 100%;
+  }
+}
+
+/* end of media query */
+
+/* sidebar nav css start  */
+@media (max-width: 767px) {
+  
+
+    .hidden-mobile {
+      display: none;
+    }
+   
+    
+  
+}
+
+@media (min-width: 767px) {
+  
+
+  .hidden-other {
+    display: none;
+  }
+ 
+  
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .flex-child {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* sidebar nav css end */
+
+/* nav hover */
+
+
+
+/* nav hover */
+/* li>a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+li>a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+ li>a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #B980FF;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+ */
+
+/* nav hover end */
+

@@ -694,13 +694,13 @@ jumbotron end */
   position: relative;
   background:none;
 }
-div#vera:after {
+.jumbotron:after {
     content : "";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/vera/photos/gallery\ photo.jpg) !important;
+    background-image: url('../img/vera/photos/vera.jpg');
     background-repeat: no-repeat;
     background-position: center;
   background-size: cover;
@@ -708,6 +708,24 @@ div#vera:after {
     height: 100%;
     opacity : 0.9;
     z-index: -1;
+
+}
+
+.jumbotron-adore:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../img/adore/download.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity : 0.9;
+  z-index: -1;
+
 }
 
 @media screen and (max-width: 600px) {

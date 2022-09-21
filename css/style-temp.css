@@ -140,6 +140,17 @@ body {
   }
 }
 
+@media (min-width: 767px) {
+  
+
+  .hidden-other {
+    display: none;
+  }
+ 
+  
+
+}
+
 .full-screen {
   display: none;
 }

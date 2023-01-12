@@ -1,679 +1,997 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Adore | Dikshita Pillai</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="public/css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" type="image/x-icon" href="public/icon1.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type='text/javascript'
+  src='https://code.jquery.com/jquery-2.0.2.js'></script>
+<link rel="stylesheet" type="text/css"
+  href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<script type='text/javascript'
+  src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/f137b0878d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css"
+  href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<link rel='stylesheet' href="css/style-temp.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+<link rel="icon" type="image/x-icon" href="img/icon1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300;400&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
-<script src="script.js" charset="utf-8"></script>
-<nav class="navbar navbar-default navbar-expand-sm navbar-fixed-top ">
-    <div class="container ">
-      <div class="navbar-header ">
-        <a class="navbar-brand my-name" href="./dist/index.html">Dikshita Pillai</a>
-      </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li id="home"><a href="my-projects.html">My Projects</a></li>
-          <li id="home"><a href="public/Resume-Dikshita.pdf">Resume</a></li>
-          <li id="about"><a href="mailto:dikshitapillai97@gmail.com">Email</a></li>
-          <li id="contact"><a href="about-me.html">About me</a></li>
-        </ul>
-    </div>
-  </nav>
 
-  <body>
+<style>
+.bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>li>a:hover,
+  .bs-docs-sidebar .nav>li>a:focus {
+  color: coral;
+  text-decoration: none;
+
+
+}
+
+
+.black-button:hover {
+  color: coral;
+}
+
+.color{
+  color: coral;
+ 
+}
+  </style>
+
+
+<script type='text/javascript' href>
+$(window).load(function(){
+$('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+});
+});
+
+window.onscroll = () => {
+  toggleTopButton();
+}
+function scrollToTop(){
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleTopButton() {
+  if (document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20) {
+    document.getElementById('back-to-up').classList.remove('d-none');
+  } else {
+    document.getElementById('back-to-up').classList.add('d-none');
+  }
+}
+</script>
+
+<title>Adore | Dikshita Pillai</title>
+</head>
+<body>
+  <!-- nav bar -->
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
-
-<!-- <%- include("partials/header"); -%> -->
-
- <img alt="vera" src="public/vera-cover.svg" style="width:100%;height: 500px;/* position: relative; *//* right: -34px; */align-items: end;">
- 
- 
- <div class="container-fluid">
-  <div class="row" style="margin-top: 50px;position: relative;bottom: 500px;">
-    <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-      <div class="bs-docs-sidebar">
-        <ul class="nav nav-stacked"id="sidebar">
-
-          <li>
-            
-            <a href="#overview">Overview</a>
-            <ul class="nav nav-stacked list">
-              <li><a href="#problem">Problem</a></li>
-              <li><a href="#solution">Solution</a></li>
-           
-              
-
-            </ul>
-          
-          </li>
-
-        
-
-          <li>
-            <a href="#empathise" class="show">Empathise</a>
-            <ul class="nav nav-stacked list">
-              <li><a href="#comp-analysis">Foundational Research</a></li>
-              <li><a href="#interviews">5 W's framework</a></li>
-              <li><a href="#personas">User Personas</a></li>
-              <li><a href="#stories">Competitive report</a></li>
-              
-              
-            </ul>
-          </li>
-
-          <li>
-            <a href="#ideate">Ideate</a>
-            <ul class="nav nav-stacked list">
-              <li><a href="#crazy">Crazy Eights</a></li>
-              <li><a href="#value">Value Proposition</a></li>
-              <li><a href="#sitemaps">Basic Sitemaps</a></li>
-             
-            </ul>
-          </li>
-
-          <li>
-            <a href="#design">Design</a>
-            <ul class="nav nav-stacked list">
-              <li><a href="#storyboarding">Storyboarding process</a></li>
-              <li><a href="#paper">Paper Wireframing</a></li>
-              <li><a href="#digital">Digital Wireframing</a></li>
-              <li><a href="#iterations">Low Fidelity prototype</a></li>
-            </ul>
-          </li>
-<li>
-          <a href="#evaluate">Evaluation</a>
-          <ul class="nav nav-stacked list">
-            <li><a href="#user-testing">User Research study</a></li>
-            <li><a href="#script">Script overview</a></li>
-            <li><a href="#results">Study Conclusions</a></li>
-        
-          </ul>
-        </li>
-
-        <li>
-        <a href="#iterate">Iterate</a>
-        <ul class="nav nav-stacked list">
-          <li><a href="#user-testing">Mockups</a></li>
-          <li><a href="#success">Sticker sheet</a></li>
-          <li><a href="#results">High fidelity prototype</a></li>
-      
-        </ul>
-      </li>
-
-          
-
-          <li>
-            <a href="#future-steps">Next steps</a>
-            
-          </li>
-
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
          
-
-        </ul>
+          <span class="icon-bar"></mark>
+          <span class="icon-bar"></mark>
+          <span class="icon-bar"></mark>
+        </button>
+        <a href="index.html" class="navbar-brand" id="name">Dikshita Pillai </a>
       </div>
-    </nav>
-    
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-
-    <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content first-section">
-      
-
-
-      <section id="overview" class="group" data-aos="fade-up" data-aos-duration="600">
-        <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-          <h6>           </h6><br>
-          <h3>Overview</h3>
-          <hr>
-          <div id="problem" class="subgroup">
-            <h4>Problem</h4>
-            <p>Adopting a pet is a life changing decision to begin with.Light should be shed on adopting rather than buying pets.The pet adoption process should be hassle free and easy to go through.These processes need to be as clear as possible
-              Most of the procedure is transferred online in the times of covid
-              
-              Importance of adopting,covering areas of petcare and what a pet parent should understand and know about the pet and making the adoption process simple and online
-              </p>
-          </div>
-      </section>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="index.html">My Projects</a>
+          </li>
+          <li>
+            <a class="nav-link" href="mailto:dikshitapillai97@gmail.com">Email</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Resume <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="resumes/Resume-Dikshita.pdf">Research format</a></li>
+              <li><a href="resumes/Design-Resume.pdf">Design format</a></li>
+              <li><a href="resumes/ASCII resume.pdf">ASCII format</a></li>
+            </ul>
+          </li>
+          
+          <li>
+            <a class="nav-link" href="about.html">About me</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div >
-<img alt="lines at ticket counters" data-aos="fade-up" data-aos-duration="600" class="img-responsive large-img " src="public/Frame 3.svg" alt="Problem Framing" style="width: 100%;" >
-</div>
+  </header>
 
-<br><br><br>
+<br>
+<br>
 <br>
 
-    <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
-      <section class="group">
-          <div class="row">
-            <div id="solution" class="subgroup">
-              <h4>Solution</h4>
-              <p>I have designed Adore to resolve these solutions.It gets you to speed with how the adoption will go through.Apart from a hassle free adoption,it also gives you a map of nearby vets and medical centers.It gets you ready for your journey of getting your pet home to raising it well and taking care of it.It even acts as a bridge if you are up for volunteering at any animal shelters or donating to them.
-              </p>
-            </div>
-
-           
-          </div>
-      </section>
-
-      <div class="subgroup">
-
-          <div class="row feature-row">
-              <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
-                <video autoplay muted loop class="video-features">
-                  <source src="../../assets/eatxplore-recommendations.mp4"/>
-                </video>
-              </div>
-
-              <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
-
-                <h5 class="video-feature-title video-feature-title-eatxplore">
-                  Tailored Recommendations
-                </h5>
-
-                <h6 class="video-feature-subtitle">
-                  Whether you want something familiar or something new, we’ve got you covered.
-                </h6>
-
-                <p class="video-feature-content">Eatxplore recommends dishes based on the your own ethnic background as well as the cuisine of the reataurant. Whether you want to be adventurous or conservative in your choice, you can find the right recommendations to quickly get you started.</p>
-              </div>
-            </div>
 
 
-            <div class="row feature-row">
-                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+  <!--Nav Bar -->
+  <div class="row ">
+  
+    <nav class="col-xs-3 bs-docs-sidebar hidden-mobile">
+      <ul id="sidebar" class="nav nav-stacked fixed hidden-mobile">
+        <li><a href="#Overview">Overview</a>
+          <ul class="nav nav-stacked">
+            <li><a href="#Problem">Problem</a></li>
+            <li><a href="#Solution">Solution</a></li>
+          </ul></li>
+        <li><a href="#Research">Research</a>
+          <ul class="nav nav-stacked">
+            <li><a href="#Initial-research">Initial research</a></li>
+            <li><a href="#Personas">Personas</a></li>
+            <li><a href="#User-stories">User Stories</a></li>
+            <li><a href="#Problem-statements">Problem statements</a></li>
+          </ul></li>
+          <li><a href="#Ideation">Ideation</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#Initial-Ideation">Initial Ideation</a></li>
+              <li><a href="#Competitive-Analysis">Competitive Analysis</a></li>
+              <li><a href="#Value-Proposition">Value Proposition</a></li>
+              <li><a href="#Information-architecture">Information architecture</a></li>
+              
 
-                  <h5 class="video-feature-title video-feature-title-eatxplore">
-                    Dish Details at a Glance
-                  </h5>
-
-                  <h6 class="video-feature-subtitle">
-                    All the information you need to make an order decision, at one place.
-                  </h6>
-
-                  <p class="video-feature-content">Want a quick overview of all the ingredients? Don’t know whether the dish meets your dietary needs? Can’t pronounce the dish name? No more Googling. You’ll find everything you need in Eatxplore at a glance.</p>
-                </div>
-
-                <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
-                  <video autoplay muted loop class="video-features">
-                    <source src="../../assets/eatxplore-steak-fajitas-v2.mp4"/>
-                  </video>
-                </div>
-            </div>
-
-
-            <div class="row feature-row">
-                <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
-                  <video autoplay muted loop class="video-features">
-                    <source src="../../assets/eatxplore-capture-menu.mp4"/>
-                  </video>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
-
-                  <h5 class="video-feature-title video-feature-title-eatxplore">
-                    Available for All Restaurants
-                  </h5>
-
-                  <h6 class="video-feature-subtitle">
-                    Instantly get photos and translations for restaurants not in our database, with AI and Crowdsourcing.
-                  </h6>
-
-                  <p class="video-feature-content">If the restaurant is not in our database, simply take a photo of the menu, and we’ll provide you with a temporary translation of the menu, as well as photos for each dish to help you order. We’ll add that restaurant to our database thanks to your photo.</p>
-                </div>
-            </div>
-            <p class="p-center-wrapper"><a href="#prototype" target="_blank"><button class="btn black-button purple" name="button">Jump to Prototype</button></a> </p>
-      </div>
-
-      <div id="methods" class="subgroup">
-          <h4>Methodology</h4>
-          <img  class="img-responsive full-img" src="public/methodology 00.PNG" alt="methodology">
-      </div>
-
-      
+            </ul></li>
+            <li><a href="#Design">Design</a>
+              <ul class="nav nav-stacked">
+                <li><a href="#Sketches-and-Wireframe">Sketches and Wireframe</a></li>
+                <li><a href="#Prototyping">Prototyping</a></li>
+                <li><a href="#Low-to-High-Fidelity">Low to High fidelity</a></li>
+              </ul></li>
+              <li><a href="#Evaluations-and-Iterations">Evaluations and Iterations</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#User-Testing-Process">User Testing process</a></li>
+                  <li><a href="#Results">Results</a></li>
+                  <li><a href="#Feedback-and-Design-Iterations">Feedback and Design Iterations</a></li>
+                </ul></li>
+                <li><a href="#Latest-Prototype">Latest prototype</a>
+                 </li>
+                 <li><a href="#Accessibility">Accessibility</a>
+                 </li>
+                  <li><a href="#Future-steps">Future steps</a>
+                    <!-- <ul class="nav nav-stacked">
+                      <li><a href="#Step1">Step</a></li>
+                      <li><a href="#Step2">Step</a></li>
+                    </ul></li> -->
 
 
-
-      </section>
-      <section id="empathise" class="group" >
-      <div class="section-divider">
-        <div class="dot1">
-        </div>
-        <div class="dot2">
-        </div>
-        <div class="dot3">
-        </div>
-      </div>
-
-      
-        <div data-aos="fade-up" data-aos-duration="600">
           
-          <h3>Emphathise</h3>
-          <hr>
-          <div class="subgroup">
-              <p></p>
-          </div>
-          <div id="my-role" class="subgroup">
-            <h4>Foundational Research</h4>
-            <p>I started with persona creation and aimed to experience pain points and goals through them</p>
-              
-
-              
-        </div>
-
-          <div id="comp-analysis" class="subgroup">
-              
-
-              <ul><h4>Research goals</h4>
-                <li>Understand the needs of people visiting the art gallery</li>
-                <li>Understand why do people visit the place and do they enjoy the experience or could it be improved</li>
-                </ul>
-                <ul><h4>Characteristics of your target audience</h4>
-                <li>People who enjoy art and visit galleries and museums often</li>
-                <li>Include participants of different age groups</li>
-                <li>Include participants with disabilities</li>
-          </ul>
-                <br><br>
-              <h4>Privacy</h4>
-               <p>This process is transparent about the documents required.You know how much information the shelter has about you.You are verified online by going through a few steps.
-              </p> 
-               
-
-           <ul> <h4> User Journey</h4>
-<p>After listing major pain points and goals of the design,I went through with the user journey highlighting the main tasks
-</p>
-<li>Go to the adoption page</li>
-<li>View animals up for adoption</li>
-<li>Go through the process of adoption</li>
-<li>Click on the adopt button and go through the adoption process</li>
-<li>Provide details</li>
-<li>Provide documents</li>
-<li>Meet you pet</li>
-<li>Vaccine administration</li>
-<li>Adoption procedure completed,you can take your pet home</li>
-
-</ul>            
+      </ul>
+    </nav>
+    
+        
+        
         
 
+    <div class="col-xs-9 overflow-hidden hidden-mobile"> 
+      <div class="jumbotron pt-6 jumbotron-adore" ></div>
+        
+      
+     
+      <section id="Overview" class="group">
+        <h2>OVERVIEW</h2>
+        <hr>
+        <div id="Problem" class="">
+          <h3>Problem</h3>
+          <h5>
+            <mark class="adore">Adopting a pet</mark> is a life changing decision to begin with.Light should be shed on <mark class='adore'>adopting rather than buying</mark> pets.The pet adoption process should be <mark class='adore'>hassle free</mark> and <mark class='adore'>easy to go through</mark>.These processes need to be as clear as possible
+            Most of the procedure is transferred <mark class='adore'>online in the times of covid.</mark>
+            
+            <h5>
+            Importance of adopting,covering areas of petcare and what a pet parent should understand and know about the pet and making the adoption process simple and online:these are just a few goals Adore plans to accomplish and make sure you are ready when you plan to welcome a pet!
+            
+            <br><br></h5>
+<h5>
+            There are <mark class='adore'>three parts of the problem</mark> that I have focussed on in this case study:
+            <br><br>
+            <ul>
+           <li> Help the pet find owner who will take care of it,</li>
+           <li> simplify the adoption process and </li>
+           <li> help you take care of your pet.</li>
+          </ul>
+          </h5>
+<br>
+          <h5>Another two aspects that I plan to include were <mark class="adore"> volunteering</mark> and <mark class="adore">donation</mark>.Many pet parents or even general citizens <mark class="adore">want to help out</mark> in their free time but are <mark class="adore">clueless</mark> of how they can help the animal shelters.So I even want to try to <mark class="adore">resolve this too through my design.</mark> </h5>
+          
+          <br><br>
+          <img class="img-responsive" src="img/adore/photos/problem.svg">
+          <br><br>
+        </div>
 
-              
+       
+        
+        <div id="Solution" class="subgroup">
+          <h3>Solution</h3>
+          <h5>I have designed Adore to resolve these solutions.It gets you to speed with <mark class="adore">how the adoption will go through</mark>.Apart from a hassle free adoption,it also gives you a <mark class="adore">map of nearby vets and medical centers</mark>.It gets you ready for your journey of getting your pet home to <mark class="adore">raising it well and taking care of it</mark>.
+            </h5>
+            <h5>
+            It even acts as a bridge if you are up for <mark class="adore">volunteering at any animal shelters or donating to them.</mark></h5>
+
+            <h5>The main goal was to <mark class="adore">make sure people get comfortable with adopting pets and don't have any misconceptions,fears or confusion</mark>.They know that they will have <mark class="adore">someone to love them.</mark> </h5>
+        </div>
+        <div class="card ">
+          <div class="card-body">
+            <p>✨ The app was named Adore.</p>
+             <p>Pets are extremely lovable and the title of this design has something to do with what I feel about them.</p>
+             <p>
+             That's how I came up with the name 'Adore'.
+
+              </p>
+          </div>
+        </div>
+        <div id="Methodology" class="subgroup">
+          <h3>Methodology</h3>
+      <img class="img-responsive" src="img/adore/photos/methodology.svg">
+          
+        </div>
+        
+      </section>
+      <section id="Research" class="group">
+        <h2>RESEARCH</h2>
+        <hr>
+        <div id="Initial-research" class="subgroup">
+          <h3>Initial research</h3>
+       <h5>I like to run a <mark class="adore">brief initial research session </mark>to know more about the initial problem and what I will be working on.For this project,I went through the basic adoption process and <mark class="adore">tried to approach sites as a user.<mark class="adore"></mark></h5>
+       <h5>After that I went through an interview preperation stage.Interview preparation is just as important as conducting the interview.Asking the right questions gets you thinking in a particular direction and if you keep that in mind,it can be useful during the ideation stages.</h5>
+
+       <h5>I started with the term <mark class="adore">"new pet parents"</mark> and <mark class="adore">tried to learn about them as much as possible.</mark></h5>
+<br>
+          <div class="card ">
+            <div class="card-body">
+              <p>✨ I absolutely loves dogs and always wanted to adopt one.
+                
+          <br>
+          My grandfather had a german shephard named Buddy with whom I have very fond memories. 
+  
+                </p>
+            </div>
+          </div>
+
+          
+        </div>
+        <div id="Personas" class="subgroup">
+          <h3>Personas</h3>
+          <h5>I started with <mark class="adore">persona creation</mark> and aimed to <mark class="adore">experience pain points and goals</mark> through them.</h5>
+          <h5>I created <mark class="adore">three user personas</mark> and their basic goals and frustations are listed below:</h5>
+          <img class="img-responsive" src="img/adore/photos/personas.svg">
+          <h5>After this stage of the empathise process,I started to create <mark class="adore">individual user journeys</mark> and analyse their <mark class="adore">individual pain points.</mark></h5>
+          <h5>
+          After the persona creation,<mark class="adore">persona developement</mark> is also important.I plan to do that through <mark class="adore">user journeys,user stories,hypothesis</mark> and the respective <mark class="adore">problem statements.</mark></h5>
+            
+            <h5>The fact that getting a pet home is fun but also <mark class="adore">involves responsibilities</mark> so I wanted my research to be solid and <mark class="adore">touch everything the represenative sample will go through.</mark></h5>
+        </div>
+        
+        <div id="User-stories" class="subgroup">
+          <h3>User Stories</h3>
+          <h5>After listing major pain points and goals of the design,I went through with the <mark class="adore">user journeys</mark> of each of the personas <mark class="adore">highlighting the main tasks.</mark></h5>
+<ol>I have listed a <mark class="adore">basic adoption procedure</mark> below and most of the procedure is online.The app design is primarily focussed in the first six steps.So I <mark class="adore">charted a user journey till the verification process(point number 6)</mark></ol>
+<br>
+           <li> Go to the adoption page</li>
+           <li> View animals for adoption</li>
+           <li> Go through the process of adoption</li>
+           <li> Click on the adopt button and go through the adoption process</li>
+           <li> Provide your basic details</li>
+           <li> Provide documents to verify your identity and address</li>
+           <li> Meet your pet (in person or online)</li>
+           <li> Vaccine administration and medical procedures are administered to your pet</li>
+           <li> Adoption procedure is officially completed,you can take your pet home!</li>
+            </h5>
+            <h5>The user stories for each persona is listed below.</h5>
 
 
-              </div>
+          <img class="img-responsive" src="img/adore/photos/stories.svg">
+        </div>
+        <div id="Problem-statements" class="subgroup">
+          <h3>Problem Statements</h3>
+          <h5>I completed working on the persona and porceeded to create their repective problem statements and related hypothesis.</h5>
 
-              
+          <h5>The <mark class="adore">final step</mark> of the research phase involved <mark class="adore">forming problem statements</mark>.These statements are like the <mark class="adore">main insights</mark> obtained from the research process and helped me move on to the define stage with confidence .The problem statements and the related hypothesis can be found when you click the above button to view detailed personas.</h5>
+<br>
+          <p class="p-center-wrapper">
+            <a href="img/adore/pdfs/User Personas.pdf" target="_blank"><button class="btn black-button" id='inner' name="button"> VIEW DETAILED USER PERSONAS</button></a></p>
+          
+        </div>
+      </section>
+      <section id="Ideation" class="group">
+       <h2>IDEATION</h2>
+       <hr>
+        <div id="Initial-ideation" class="subgroup">
+          <h3>Initial ideation</h3>
+          <h5>I took two brainstorming approaches for the initial brainstorming namely <mark class="adore">Crazy eights</mark> and <mark class="adore">how might we.</mark></h5>
+          <h5>Each of them was helpful in their own ways or directing the initial ideation leading on to a firm value proposition. </h5>
 
+          <div class="card ">
+            <div class="card-body">
+              <p>✨ This is a entirely personal opininon but I feel that the initial brainstorming should be as <mark class="adore">explorative and crazy as possible. </mark>
+  
+                </p>
+            </div>
+          </div>
+
+          <h3>Crazy Eights</h3>
+          <h5>I implemented one of my favourite techniques to kickstart the ideation process.
+             </h5>
+             <h5>You can see the eight columns of my ideas below: </h5>
+             <!-- //crazy eights pic -->
+             <img class="img-responsive" src="img/adore/photos/crazy eights.jpg">
+
+            <h5>After this,I proceeded to the how might we technique.</h5>
+            <h5>This helps to uncover some <mark class="adore">gap</mark> between what the <mark class="adore">present ideas</mark> are and <mark class="adore">what the design plans to accomplish.</mark></h5>
+
+            <h5>This ideation stage sees the problem,the user,the context from <mark class="adore">many different perspectives.</mark></h5>
+
+            <h5>The next part of the initial ideation phase was <mark class="adore">"how might we?"</mark></h5>
+            <h5>These are short questions that launch brainstorming and make you think more about the environment and context to see gaps to fill in.</h5>
+<h5>I review the problem statement and try to break the painpoints and other features into smaller actionable pieces.I brainstorm the HMW questions before moving forward with brainstorming the solutions.</h5>
+
+<h5>Click the button below to see the HMW questions</h5>
+            <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#how-might-we" class="btn black-button collapsed" name="button" aria-expanded="false">How might we?</button></p>
+
+            <div class="collapse" id="how-might-we">
+              <ol>
+                <li> <p class="color">Amp up the good</p>: HMW highlight all types of pets not only dogs and cats?</li>
+            
+                <li>
+                  <p class="color"> Explore the opposite</p>: HMW make the wait the most exciting part of the trip?
+                </li>
+
+                <li>
+                  <p class="color"> Question an assumption</p>: HMW streamline the adoption process and make it simpler?
+                </li>
+
+                <li>
+                  <p class="color"> Go after adjectives</p>: HMW we make the process seamless and not make the person who is adopting anxious?
+                </li>
+            <li>
+              <p class="color">   ID unexpected resources</p>: HMW tell the users how they are helping by adopting rather than buying? 
+                </li>
+                <li>
+                  <p class="color">  Create an analogy from need or context</p>: HMW make this process similar to knowing another human ?
+                </li>
+                <li>
+                  <p class="color"> Play POV against the challenge</p>: HMW make the website approachable and accessible whenever a person wants to adopt or take care of their pet?
+                </li>
+                <li>
+                  <p class="color"> Change the status quo</p>: HMW decide and choose the perfect pet?HMW give the adopter regular updates about the pet?
+                </li>
+                <li>
+                  <p class="color">  Break POV into pieces</p>: HMW consider the medical requirements of the pet?HMW keep them safe and aligned with covid protocols?
+                </li>
+          
+            
+           
+          
+           
+          </ol>
+        
+            </div>
+        </div>
+        <div id="Competitive-analysis" class="subgroup">
+          <h3>Competitive Analysis</h3>
+          <h5>I conducted a competitive analysis as the next step.It was divided into two parts where I conduct an <mark class="adore">audit</mark> and make a crisp <mark class="adore">report</mark> for that.</h5>
+          <h5>The competitive audit was conducted on the terms of the <mark class="adore">visual design, content, interaction, accessibility</mark>, and <mark class="adore">user flow</mark>.The brand's unique value proposition was also noticed.
+            </h5>
+          <br><br>
+          <img class="img-responsive" src="img/adore/photos/competitive audit.svg">
+          <h5><mark class="adore">Petfinder</mark> and <mark class="adore">Adopt a pet</mark> are the two designs I went through for the report.Both of them are <mark class="adore">direct competitor</mark>s are had pretty good designs.This step was of utmost importance because I got to see the basic framework and flows of these two designs.The mistakes could be neglected and better features could be inculcated in my design making Adore better.</h5>
+          <br><br>
+          
+<h5>The competitive analysis was conducted in two stages.In the first step,the companies were <mark class="adore">individually audited and then a <mark class="adore">cumulative audit report</mark> was generated.The report had <mark class="adore">concise points and findings relating to the features of their design.</mark></h5>
+<br><br>
+          <p class="p-center-wrapper">
+            <a href="img/adore/pdfs/Adore Competitive Audit Report .pdf" target="_blank"><button class="btn black-button" id='inner' name="button"> VIEW COMPETITIVE AUDIT REPORT</button></a></p>
+        </div>
+        <div id="Value-Proposition" class="subgroup">
+          <h3>Value Proposition</h3>
+         <h5>The value proposition was conducted keeping all the perspectives and required features in mind.We took <mark class="adore">first timers and frequent adopters all on the scale in mind</mark>.The value proposition <mark class="adore">highlights features of the design and how have we gone about them.</mark></h5>
+          <img class="img-responsive" src="img/adore/photos/value proposition.svg">
+          <h5>This is one pf the most crucial parts of the design as it sets the features and parts on the design I have to work on.It was properly chartered and made my work easier with the basic user flows and information architecture.</h5>
+        </div>
+        
+        <br><br>
+        <div id="Information-architecture" class="subgroup">
+          <h3>Information architecture</h3>
+          <h5>The <mark class="adore">information architecture</mark> forms a <mark class="adore">good backbone</mark> when proceeding to build wireframes or a low fidelity prototype.</h5>
+          <h5>It gives my whole mockup plan a structure.It also makes it easier for me to wireframe according to it and simplifes the user flows.</h5>
+          <h5>For creating the information architecture,I worked along the lines of five major sections of the designs.</h5>
+          <img class="img-responsive" src="img/adore/photos/basic ideation.jpg">
+          <h5>Then I proceeded on <mark class="adore">developing features</mark> of these sections.I explored various options to put in each categories and only the necessary ones were chosen.An excess of options could confuse the user and increase the complexity of decisions or options chosen.</h5>
+          <h5>The final information architecture of Adore can be seen below:</h5>
+          <img class="img-responsive" src="img/adore/photos/ia.jpg">
+        </div>
+       
+      </section>
+      <section id="Design" class="group">
+        <h2>DESIGN</h2>
+        <hr>
+        <div id="Sketches-and-Wireframe" class="subgroup">
+          <h3>Sketches and Wireframes</h3>
+          <h5>Based on the information architecture and the basic user flow,I proceeded to draw free hand.</h5>    
+            <h5>
+              For this design,I used the <mark class="adore">responsive web design</mark>.I started sketching the paper wireframes for my website initially before moving on to the mobile layout.</h5>
+              <h5>
+                Adore is a project which will be a <mark class="adore">responsive web design</mark> with a <mark class="adore">dedicated mobile app</mark>.
+              </h5>
+              <h5>
+                The approach that I took for sketching wireframes is also called the <mark class="adore">top down approach</mark>.In this approach,I start <mark class="adore">designing for a bigger screen sizes(laptop and tablets) before moving on to the smaller screen sizes(mobile phones)</mark>.              </h5>
+             
+            <h5>The paper wireframes of the design can be seen below.</h5>
              
 
-              <br><br><br><br>
-              <img alt="personas part one" src="public/persona 01.svg" style="width:100%;height: 500px;/* position: relative; *//* right: -34px; */align-items: end;">
-              <br>
-              <br>
-              <br>
-              <img alt="personas part two" src="public/personas02.svg" style="width:100%;height: 500px;/* position: relative; *//* right: -34px; */align-items: end;">
-              <br>
-              <br>
-              <a href="public/PERSONAS (3).pdf" target="_blank">
-              
-              <button onclick="ShowAndHide()" class="btn black-button purple" name="button" >VIEW DETAILED USER PERSONAS</button></a>
-              
-              
-          
-            <br>
-            <br>
-           <h4> After mapping the user journeys of each persona,here are the user stories:</h4>
-            <img class="logo" src="public/user stories 01.svg" alt="User stories part one" style="width:125%">
-            <img class="logo" src="public/user sotries 02.svg" alt="User stories part two" style="width:125%">
-              </p>
-          </div>
-
-
-
-          <div id="interviews" class="subgroup">
-            <h4>Competitive audit and report</h4>
-            <p>Then I constructed a competitive audit and generated a competitive report
- 
-              The competitive audit was conducted on the terms of the visual design,content,interaction,accessibility and user flow.The brand's unique value proposition was also noticed.
-              From this audit,I later generated a report.
-</p>              
-              <div class="row" style="display:flex;">
-                <div class="column">
-                  <img class="logo" src="public/VoiceMap-logo.jpg" alt="voicemap logo" style="width:100%">
-                </div>
-                <div class="column">
-                  <img class="logo" src="public/smartify_sized.webp" alt="smartify logo" style="width:100%">
-                </div>
-              </div>
-              <br><br><br><br>
-              <button onclick="ShowAndHide2()" class="btn black-button purple" name="button" > SEE REPORT CONCLUSIONS</button>
-              <br><br><br><br>
-              <div class="collapse" id="competitive" style="display:none">
-              <img alt="competitive audit" src="public/competitve audit.PNG" style="width:160%;height: 530px;/* position: relative; *//* right: -34px; */align-items: end;">
-              <img alt="competitive audit" src="public/Untitled presentation (1).svg" style="width:160%;height: 530px;/* position: relative; *//* right: -34px; */align-items: end;">
-              </div>
-</p>          
-</div>
-</div>
-</section>   
-<section id="ideate" class="group" >
-
-<div class="section-divider">
-  <div class="dot1">
-  </div>
-  <div class="dot2">
-  </div>
-  <div class="dot3">
-  </div>
-</div>
-
-              <!-- <img class="img-responsive full-img" src="../../assets/eatxplore-affinity-mapping.jpg" alt="">  <br><br><br> -->
-<br><br>
-
-  <div data-aos="fade-up" data-aos-duration="600">
-    <h3>Ideation</h3>
-    <hr>
-    <div class="subgroup">
-
-
-     <p>Two brainstorming approaches were taken by me</p> 
-      1.Crazy eights
-      2.How might we?
-      <h4>Crazy Eights</h4>
-      
-                <br>
-               
-                <img class="logo" src="public/crazy eights.jpg" alt="bigpicture storyboarding" style="width:100% ;">
-                <br>
-                <br>
-
-                <h4>How might we?</h4>
-              <li>  Amp up the good: HMW highlight all types of pets not only dogs and cats?</li>
-              <li>  Explore the opposite: HMW make the wait the most exciting part of the trip? </li>
-              <li>  Question an assumption: HMW streamline the adoption process and make it simpler?</li>
-              <li>  Go after adjectives: HMW we make the process seamless and not make the person who is adopting anxious?</li>
-              <li>   ID unexpected resources: HMW tell the users how they are helping by adopting rather than buying?</li>
-              <li>   Create an analogy from need or context: HMW make this process similar to knowing another human ?</li>
-              <li>  Play POV against the challenge: HMW make the website approachable and accessible whenever a person wants to adopt or take care of their pet?</li>
-              <li>  Change the status quo: HMW decide and choose the perfect pet?HMW give the adopter regular updates about the pet?</li>
-              <li>  Break POV into pieces: HMW consider the medical requirements of the pet?HMW keep them safe and aligned with covid protocols?</li>
-                
-                
-               
-               
- 
-                <!-- </p> -->
-
-                <br><br><br><br>
-  
-                
-                  <img alt="value proposition" src="public/ideation.PNG" style="width:150%;height: 570px;/* position: relative; *//* right: -34px; */align-items: end;">
-               
-               <br><br><br><br>
-               <br><br><br><br>
-              <h4>Finalised Features</h4>
-              <p>I ended up zeroing down on some major from them and acting on them
-                <img alt="finalised features" src="public/Frame 2.svg" style="width:100%;display: flex;justify-content: center;">
-              </p>
-              <h4>Sitemap and structure</h4>
-              <p>
-                Next I created a basic information architecture for the website flow
-                
-                <br>
-                <br>
-
-<a href="public/User flow .pdf" target="_blank">
-              
-              <button onclick="ShowAndHide()" class="btn black-button purple" name="button" >SEE USER FLOWS</button></a>
-
- 
-             </p>
-             </div>
-             </div>
-             </section>
-
-
-         
-             <section id="design" class="group" >
-       
-        <div class="section-divider">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-          <div class="dot3">
-          </div>
-        </div>
-
-       
-        
-          <div data-aos="fade-up" data-aos-duration="600">
-            <h3>Design</h3>
-            <hr>
-            <div class="subgroup">
-         <h4> Storyboarding</h4>
-        <p>I started with storyboarding.I made two storyboards -big picture and close up.
-        </p>
-         <img class="logo" src="public/big picture storyboarding.jpg" alt="bigpicture storyboarding" style="width:49%">
-                <img class="logo" src="public/closeup storyboarding.jpg" alt="close up storyboarding" style="width:50%">
-          <h4>Paper wireframing</h4>
-         <p> After that I started drawing basic paper wireframes</p>
-         <img class="logo " src="public/wireframing 1.jpg" alt="paper wireframes" style="width:49%">
-         <img class="logo" src="public/wireraming 2.jpg" alt="paper wireframes" style="width:49%">
-         <br><br>
-         <h4>Digital Wireframing</h4>
-         <p>These were then converted to digital wireframes..A few sample wireframes are shown below:
+            <br><br>
+          <img class="img-responsive" src="img/adore/photos/web wireframe 1.jpg">
           <br><br>
-         <img alt="finalised features" src="public/Frame 02.svg" style="width:125%;height: 800px;/* position: relative; *//* right: -34px; */align-items: end;"></p>
-         <br><br>
-         <h4>Low Fidelity Prototype</h4>
-         <p>As this is a responsive site,I made wireframes for a laptop sized screen and a mobile simultaneously.
-          Before I increased the fidelity of my prototype,I conducted a usability study to see if my design was usable and the user flow was clear.
-          <br>I used <span class="highlight"> Figma</span> for both the wireframing and prototyping process.</p>
-          <a href="public/UX Research Study Plan-VERA.pdf" target="_blank">
-              
-            <button onclick="ShowAndHide()" class="btn black-button purple" name="button" >LOW FIDELITY PROTOTYPE </button></a>
-          </div>
-          </div>
-
-          
-        </section>
-        <section id="evaluate" class="group" >
-        <div class="section-divider">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-          <div class="dot3">
-          </div>
-        </div>
-
-        
-          <div data-aos="fade-up" data-aos-duration="600">
-            <h3>Evaluate</h3>
-            <hr>
-            <div class="subgroup">
-         <h4>  User Research study / Design Research</h4>
-         <p>I layed out a basic user study report with KPIs mentioned below
-        </p>
-         <ol> <h4>KPIs were</h4>
-          <li><span class="highlight"> Time on task </span>-How much time does it take to go through the adoption process?
-          </li>
-
-          <li><span class="highlight">  Conversion rates </span>-How many users are able to go through the entire adoption process?</li>
-
-           <li><span class="highlight"> User error rates </span>-How often do the users get stuck or make errors while using the replace?</li>
-           <li><span class="highlight"> Drop off rates</span>-How many users abandon the experience?</li>
-          
-            <li><span class="highlight">Net Promoter score</span>-How many users recommend others to use this website?</li>
-          </ol>
-          <br>
-          <ul><h4>Overview of the script</h4></ul>
-          <li>Introduce the project goal, and put users at ease.</li>
-<li>Describe the scenario, set up the context, and let users use the app while thinking aloud.</li>
-<li>Ask follow up questions and gather feedback.</li>
-<li>Let users fill out a questionnaire. Thank them for participating.</li>
-         
-<br><br>
-<a href="public/UX Research Study Plan-VERA.pdf" target="_blank">
-              
-  <button onclick="ShowAndHide()" class="btn black-button purple" name="button" >VIEW USER RESEARCH STUDY PLAN </button></a>
-          </div>
-          </div>
+          <img class="img-responsive" src="img/adore/photos/web wireframe 2.jpg">
           <br><br>
-          <h4> Unmoderated usability study </h4>
-          <p>  I then tested the low fidelity prototype.I conducted an unmoderated usability study with a few family and friends
+          <img class="img-responsive" src="img/adore/photos/mob wireframe.jpg">
+<h5></h5>
+        </div>
+        
+        <div id="Prototyping" class="subgroup">
+          <h3>Prototyping</h3>
+          <h5>As the first step,I <mark class="adore">converted the paper wireframes to digital wireframes</mark>.
+<br>
+Since the design is supposed to be responsive,<mark class="adore">two different wireframes were created according to the device</mark>.This model then went for testing before increasing the fidelity.
+<br>
+I like to <mark class="adore">check the usability of the design</mark> with the low fidelity prototype itself as it <mark class="adore">helps user focus on the basic user flows and navigation flows more accurately</mark>.With colour or style,it may be aesthetically pleasing but it doesn't guarantee true reviews about the usability.
+<br>
+This is done keeping the <mark class="adore">aesthetic usability effect</mark> in mind.
+This effect is again used when colours,patterns and styles are added to make sure the colours are pleasant enough to overlook a few usability concerns.
+<br>
 
-            I took inputs by writing down notes which I later converted into a spreadsheet note.For this study,the participants adopted the think aloud method.
-            From the spreadsheet notes,I came across similar patterns.I clubbed patterns to find out themes.
-            
-            I used the affinity mapping technique.
-            
-            <br><br><br><br>
-            <img alt="affinity mapping" src="public/Art gallery project.png" style="width:100%;align-items: end;"></p>
-            </p>
-            <br><br><br><br>
-            <h4> Usability test conclusions</h4>
-            <p>Gaining insights from the study was really helpful.I worked on the laptop and mobile low fidelity prototypes.I changed the low fidelity prototypes and inculcated the useful insights.
-
-            </p>
-            <button onclick="ShowAndHide3()" class="btn black-button purple" name="button" >USABILITY STUDY CONCLUSIONS</button>
-              <br><br><br><br>
-              <div class="collapse" id="usability" style="display:none">
-              <img alt="usability study conclusions" src="public/usability conclusions.svg" style="width:160%;height: 530px;/* position: relative; *//* right: -34px; */align-items: end;">
-            
-              </div>
-          
-          
-        </section>
-        <section id="iterate" class="group" >
-        <div class="section-divider">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-          <div class="dot3">
-          </div>
+          </h5>
+          <img class="img-responsive" src="img/adore/photos/digital wireframes.svg">
         </div>
 
         
-          <div data-aos="fade-up" data-aos-duration="600">
-            <h3>Iterations</h3>
-            <hr>
-            <div class="subgroup">
-         <h4>  Signinficant changes</h4>
-        
-          <br>
-          <h4> Mockup</h4>
-          <p>I moved on to add colour and styles to my design.I created mockups for both mobile and laptop versions.
-            </p>
-            <img  class="img-responsive full-img" src="public/Frame 26.svg" alt="initial and revised homepage mockup" style="width:100%">
-            <p>After I fixated and focussed on a few colours,this is what the sticker sheet looks like.</p>
-            <img  class="img-responsive full-img" src="public/sticker-sheet.svg" alt="sticker sheet">
-            <br><br><br><br>
-            <h4>High fidelity prototype</h4>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOEqu3QdxJ78LYWunWNQ49D%2FWireframes-Audio-tour-project%3Fnode-id%3D372%253A2422%26scaling%3Dscale-down%26page-id%3D113%253A2%26starting-point-node-id%3D188%253A68" allowfullscreen></iframe>
-          </div>
-          </div>
-          
-          
-        </section>
-        <section id="future-steps" class="group" >
-        <div class="section-divider">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-          <div class="dot3">
-          </div>
-        </div>
-
-        
-          <div data-aos="fade-up" data-aos-duration="600">
-            <h3>Next steps</h3>
-            <hr>
-            <div class="subgroup">
-         <h4>  </h4>
-        
-          <br>
-         
-          </div>
-          </div>
-          
-          
-        </section>
-        <div class="section-divider">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-          <div class="dot3">
-          </div>
-        </div>
+        <div id="Low-to-High-Fidelity" class="subgroup">
+          <h3>Low to high fidelity</h3>
+          <h5>There are two versions of the design,an app and a responsive website.This was done <mark class="adore">keeping the users in mind and how they would like to access the site.</mark> </h5>
+      <img class="img-responsive" src="img/adore/photos/design spec.svg">
+<h5>The major processes of the app and website are given below.<mark class="adore">The onboarding process and all the other user flow are some how developed from the value proposition</mark>. I can see the features in action which were planned in the value proposition.This is why that was such a crucial step.</h5>
+      <img class="img-responsive" src="img/adore/photos/main features showcase.svg">
+      <h5>The major colours and styles inculcated are shown below.I chose <mark class="adore">warm colours</mark> mainly <mark class="adore">autumn tones</mark> because of their <mark class="adore">welcoming nature</mark>.I wanted the design to be bright and warm and have neutral tones that <mark class="adore">invite users to check out Adore.</mark></h5>
+      <img class="img-responsive" src="img/adore/photos/sticker-sheet-adore.svg">
+      <h5>The low fidelity prototype can be viewd by clicking the button given below:</h5>
 
 
-      </div>
-    </div>
-    </div>
-    </div>
+           
 
-<div class="container-fluid">
-  <div class="row footer-row">
-    <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      
-      <p style="position: relative;right:20px;">
-        <a class="hvr-underline-from-left" href="my-projects.html" >All</a> 
-        <a class="hvr-underline-from-left" href="vera.html">Vera</a> 
-        <a class="selected-footer" href="adore.html">Adore</a> 
-        <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> 
-        
-      </p>
-      </div>
-      </div>
-      </div>
-      
-      
-      
-      <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+ <p class="p-center-wrapper">
+  <a href="https://xd.adobe.com/view/bcb5b5dc-3518-4650-90e1-98855a5af4c8-e9e6/" target="_blank">
+    <button class="btn black-button" name="button"> VIEW LOW FIDELITY PROTOTYPE</button>
     
+  </a>
+</p> 
+        </div>
+      </section>
+     
+      
+      <section id="Evaluations-and-Iterations" class="group">
+        <h2>EVALUATIONS AND ITERATIONS</h2>
+        <hr>
+      
+        <div id="User-Testing-Process" class="subgroup">
+          <h3>User Testing Process</h3>
+          <h5>The user testing process was initiated by a <mark class="adore">user research report</mark> which described how the research was supposed to take place and how to go about the testing in order of the activities.
+<br>
+Some of the major design goals are highlighted below:
 
-<!-- <%- include("partials/footer"); -%> -->
+          </h5>
+      <img class="img-responsive" src="img/adore/photos/design goals.svg">
+      <h5>Another part of the report was how to <mark class="adore">measure the usability and the efficiency of the design</mark> when the participants of the study are assigned tasks.
+        <mark class="adore">Key Performance indicators or KPIs</mark> are listed below which helped in identifying how the users are reacting to the designs and what actions are they taking.<mark class="adore">Their user flows were documented in the process and analysed later</mark>.This was an important step in <mark class="adore">identifying how the design is being used</mark> and <mark class="adore">how much does it match to the user's mental model</mark>.
+
+      </h5>
+      <img class="img-responsive" src="img/adore/photos/kpi.svg">
+        </div> 
+
+        <div id="Results" class="subgroup">
+          <h3>Results</h3>
+          <h5>After the report and script was ready,the participant user study was conducted smoothly.The participants were chosen from <mark class="adore">different age groups</mark> and that <mark class="adore">helped hugely in identifying the differnet user flows one could take</mark> or the <mark class="adore">roadblocks faced by the participants</mark>.
+<br>
+<mark class="adore"> Four participants</mark> helped me in the usability testing phase.They were allowed to <mark class="adore">browse through</mark> for a while and then were <mark class="adore">assigned basic tasks</mark>.
+<br>
+            
+          </h5>
+          <h5>
+            The performance of the design is demonstrated in the charts below where you can see in which places the design did not work and what the users expected in place of them.From this basic insights were derived which is basically where I have to iterate the design.
+
+          </h5>
+      <img class="img-responsive" src="img/adore/photos/slightly sure.svg">
+      <h5></h5>
+      <img class="img-responsive" src="img/adore/photos/confused.svg">
+      <h5></h5>
+      <img class="img-responsive" src="img/adore/photos/confident.svg">
+
+          
+        </div>
+        <div id="Feedback-and-Design-Iterations" class="subgroup">
+          <h5>After finding common patterns in the results of the testing phase,<mark class="adore">they were grouped together to form insights</mark> which I have to further work on.The insights were <mark class="adore"></mark>prioritised according to their position in the user flows</mark> and the iteration was followed through.
+          <br>
+        Given below is an <mark class="adore">affinity diagram</mark> of the insights gathered.</h5>
+          <img class="img-responsive" src="img/adore/photos/Quick Retrospective (2).jpg">
+          <h5>After making changes in the low and high fidelity prototype,the final design is ready to view below.</h5>
+
+        </div>
+      </section>
+      
+      <section id="Latest-Prototype" class="group">
+        <h2>LATEST PROTOTYPE</h2>
+        <hr>
+       
+        <h5> Here's the latest prototype with the iterations inculcated.<br>
+          Further changes to the design based on user feedback will be posted soon.</h5>
+
+          <iframe width="1920" height="1080" src="https://xd.adobe.com/embed/9ad8107d-77a0-4174-94d3-a9d462389088-cf8b/?fullscreen&hints=off" frameborder="0" allowfullscreen></iframe>
+        
+      </section>
+     
+
+      <section id="Accessibility" class="group">
+        <h2>ACCESSIBILITY</h2>
+        <hr>
+        <div id="" class="subgroup">
+          <h5>Accessibility is something I wanted to actively include in my project.I include it in ways possible and expand on those in the further iterations.</h5>
+          <h5>Below mentioned are some ways I tried to make this porject accessible.</h5>
+        
+      <img class="img-responsive" src="img/adore/photos/accessibility.svg">
+
+          
+        </div>
+      </section>
+      
+      
+      
+      <section id="Future-steps" class="group">
+        <h2>FUTURE STEPS</h2>
+        <hr>
+        <div id="Step1" class="subgroup">
+          <h5>These are some of the <mark class="adore">main agendas</mark> I plan to work on later in the rpojecat.The <mark class="adore">future possibilities of Adore</mark> are described below</h5>
+      <img class="img-responsive" src="img/adore/photos/future.svg">
+      <img class="img-responsive" src="img/adore/photos/future2.svg">
+      <img class="img-responsive" src="img/adore/photos/future3.svg">
+
+
+          
+        
+          
+         
+        </div>
+      </section>
+      
+     
+    </div>
+  </div>
+<!-- mobile ver starts -->
+<div class=" overflow-hidden hidden-other">
+  <div class="jumbotron-adore jumbotron pt-6" ></div>
+   
+    <section id="Overview" class="group">
+      <h2>OVERVIEW</h2>
+      <hr>
+      <div id="Problem" class="">
+        <h3>Problem</h3>
+        <h5>
+          <mark class="adore">Adopting a pet</mark> is a life changing decision to begin with.Light should be shed on <mark class='adore'>adopting rather than buying</mark> pets.The pet adoption process should be <mark class='adore'>hassle free</mark> and <mark class='adore'>easy to go through</mark>.These processes need to be as clear as possible
+          Most of the procedure is transferred <mark class='adore'>online in the times of covid.</mark>
+          
+          <h5>
+          Importance of adopting,covering areas of petcare and what a pet parent should understand and know about the pet and making the adoption process simple and online:these are just a few goals Adore plans to accomplish and make sure you are ready when you plan to welcome a pet!
+          
+          <br><br></h5>
+<h5>
+          There are <mark class='adore'>three parts of the problem</mark> that I have focussed on in this case study:
+          <br><br>
+          <ul>
+         <li> Help the pet find owner who will take care of it,</li>
+         <li> simplify the adoption process and </li>
+         <li> help you take care of your pet.</li>
+        </ul>
+        </h5>
+<br>
+        <h5>Another two aspects that I plan to include were <mark class="adore"> volunteering</mark> and <mark class="adore">donation</mark>.Many pet parents or even general citizens <mark class="adore">want to help out</mark> in their free time but are <mark class="adore">clueless</mark> of how they can help the animal shelters.So I even want to try to <mark class="adore">resolve this too through my design.</mark> </h5>
+        
+        <br><br>
+        <img class="img-responsive" src="img/adore/photos/problem.svg">
+        <br><br>
+      </div>
+
+     
+      
+      <div id="Solution" class="subgroup">
+        <h3>Solution</h3>
+        <h5>I have designed Adore to resolve these solutions.It gets you to speed with <mark class="adore">how the adoption will go through</mark>.Apart from a hassle free adoption,it also gives you a <mark class="adore">map of nearby vets and medical centers</mark>.It gets you ready for your journey of getting your pet home to <mark class="adore">raising it well and taking care of it</mark>.
+          </h5>
+          <h5>
+          It even acts as a bridge if you are up for <mark class="adore">volunteering at any animal shelters or donating to them.</mark></h5>
+
+          <h5>The main goal was to <mark class="adore">make sure people get comfortable with adopting pets and don't have any misconceptions,fears or confusion</mark>.They know that they will have <mark class="adore">someone to love them.</mark> </h5>
+      </div>
+      <div class="card ">
+        <div class="card-body">
+          <p>✨ The app was named Adore.</p>
+           <p>Pets are extremely lovable and the title of this design has something to do with what I feel about them.</p>
+           <p>
+           That's how I came up with the name 'Adore'.
+
+            </p>
+        </div>
+      </div>
+      <div id="Methodology" class="subgroup">
+        <h3>Methodology</h3>
+    <img class="img-responsive" src="img/adore/photos/methodology.svg">
+        
+      </div>
+      
+    </section>
+    <section id="Research" class="group">
+      <h2>RESEARCH</h2>
+      <hr>
+      <div id="Initial-research" class="subgroup">
+        <h3>Initial research</h3>
+     <h5>I like to run a <mark class="adore">brief initial research session </mark>to know more about the initial problem and what I will be working on.For this project,I went through the basic adoption process and <mark class="adore">tried to approach sites as a user.<mark class="adore"></mark></h5>
+     <h5>After that I went through an interview preperation stage.Interview preparation is just as important as conducting the interview.Asking the right questions gets you thinking in a particular direction and if you keep that in mind,it can be useful during the ideation stages.</h5>
+
+     <h5>I started with the term <mark class="adore">"new pet parents"</mark> and <mark class="adore">tried to learn about them as much as possible.</mark></h5>
+<br>
+        <div class="card ">
+          <div class="card-body">
+            <p>✨ I absolutely loves dogs and always wanted to adopt one.
+              
+        <br>
+        My grandfather had a german shephard named Buddy with whom I have very fond memories. 
+
+              </p>
+          </div>
+        </div>
+
+        
+      </div>
+      <div id="Personas" class="subgroup">
+        <h3>Personas</h3>
+        <h5>I started with <mark class="adore">persona creation</mark> and aimed to <mark class="adore">experience pain points and goals</mark> through them.</h5>
+        <h5>I created <mark class="adore">three user personas</mark> and their basic goals and frustations are listed below:</h5>
+        <img class="img-responsive" src="img/adore/photos/personas.svg">
+        <h5>After this stage of the empathise process,I started to create <mark class="adore">individual user journeys</mark> and analyse their <mark class="adore">individual pain points.</mark></h5>
+        <h5>
+        After the persona creation,<mark class="adore">persona developement</mark> is also important.I plan to do that through <mark class="adore">user journeys,user stories,hypothesis</mark> and the respective <mark class="adore">problem statements.</mark></h5>
+          
+          <h5>The fact that getting a pet home is fun but also <mark class="adore">involves responsibilities</mark> so I wanted my research to be solid and <mark class="adore">touch everything the represenative sample will go through.</mark></h5>
+      </div>
+      
+      <div id="User-stories" class="subgroup">
+        <h3>User Stories</h3>
+        <h5>After listing major pain points and goals of the design,I went through with the <mark class="adore">user journeys</mark> of each of the personas <mark class="adore">highlighting the main tasks.</mark></h5>
+<ol>I have listed a <mark class="adore">basic adoption procedure</mark> below and most of the procedure is online.The app design is primarily focussed in the first six steps.So I <mark class="adore">charted a user journey till the verification process(point number 6)</mark></ol>
+<br>
+         <li> Go to the adoption page</li>
+         <li> View animals for adoption</li>
+         <li> Go through the process of adoption</li>
+         <li> Click on the adopt button and go through the adoption process</li>
+         <li> Provide your basic details</li>
+         <li> Provide documents to verify your identity and address</li>
+         <li> Meet your pet (in person or online)</li>
+         <li> Vaccine administration and medical procedures are administered to your pet</li>
+         <li> Adoption procedure is officially completed,you can take your pet home!</li>
+          </h5>
+          <h5>The user stories for each persona is listed below.</h5>
+
+
+        <img class="img-responsive" src="img/adore/photos/stories.svg">
+      </div>
+      <div id="Problem-statements" class="subgroup">
+        <h3>Problem Statements</h3>
+        <h5>I completed working on the persona and porceeded to create their repective problem statements and related hypothesis.</h5>
+
+        <h5>The <mark class="adore">final step</mark> of the research phase involved <mark class="adore">forming problem statements</mark>.These statements are like the <mark class="adore">main insights</mark> obtained from the research process and helped me move on to the define stage with confidence .The problem statements and the related hypothesis can be found when you click the above button to view detailed personas.</h5>
+<br>
+        <p class="p-center-wrapper">
+          <a href="img/adore/pdfs/User Personas.pdf" target="_blank"><button class="btn black-button" id='inner' name="button"> VIEW DETAILED USER PERSONAS</button></a></p>
+        
+      </div>
+    </section>
+    <section id="Ideation" class="group">
+     <h2>IDEATION</h2>
+     <hr>
+      <div id="Initial-ideation" class="subgroup">
+        <h3>Initial ideation</h3>
+        <h5>I took two brainstorming approaches for the initial brainstorming namely <mark class="adore">Crazy eights</mark> and <mark class="adore">how might we.</mark></h5>
+        <h5>Each of them was helpful in their own ways or directing the initial ideation leading on to a firm value proposition. </h5>
+
+        <div class="card ">
+          <div class="card-body">
+            <p>✨ This is a entirely personal opininon but I feel that the initial brainstorming should be as <mark class="adore">explorative and crazy as possible. </mark>
+
+              </p>
+          </div>
+        </div>
+
+        <h3>Crazy Eights</h3>
+        <h5>I implemented one of my favourite techniques to kickstart the ideation process.
+           </h5>
+           <h5>You can see the eight columns of my ideas below: </h5>
+           <!-- //crazy eights pic -->
+           <img class="img-responsive" src="img/adore/photos/crazy eights.jpg">
+
+          <h5>After this,I proceeded to the how might we technique.</h5>
+          <h5>This helps to uncover some <mark class="adore">gap</mark> between what the <mark class="adore">present ideas</mark> are and <mark class="adore">what the design plans to accomplish.</mark></h5>
+
+          <h5>This ideation stage sees the problem,the user,the context from <mark class="adore">many different perspectives.</mark></h5>
+
+          <h5>The next part of the initial ideation phase was <mark class="adore">"how might we?"</mark></h5>
+          <h5>These are short questions that launch brainstorming and make you think more about the environment and context to see gaps to fill in.</h5>
+<h5>I review the problem statement and try to break the painpoints and other features into smaller actionable pieces.I brainstorm the HMW questions before moving forward with brainstorming the solutions.</h5>
+
+<h5>Click the button below to see the HMW questions</h5>
+          <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#how-might-we" class="btn black-button collapsed" name="button" aria-expanded="false">How might we?</button></p>
+
+          <div class="collapse" id="how-might-we">
+            <ol>
+              <li> <p class="color">Amp up the good</p>: HMW highlight all types of pets not only dogs and cats?</li>
+          
+              <li>
+                <p class="color"> Explore the opposite</p>: HMW make the wait the most exciting part of the trip?
+              </li>
+
+              <li>
+                <p class="color"> Question an assumption</p>: HMW streamline the adoption process and make it simpler?
+              </li>
+
+              <li>
+                <p class="color"> Go after adjectives</p>: HMW we make the process seamless and not make the person who is adopting anxious?
+              </li>
+          <li>
+            <p class="color">   ID unexpected resources</p>: HMW tell the users how they are helping by adopting rather than buying? 
+              </li>
+              <li>
+                <p class="color">  Create an analogy from need or context</p>: HMW make this process similar to knowing another human ?
+              </li>
+              <li>
+                <p class="color"> Play POV against the challenge</p>: HMW make the website approachable and accessible whenever a person wants to adopt or take care of their pet?
+              </li>
+              <li>
+                <p class="color"> Change the status quo</p>: HMW decide and choose the perfect pet?HMW give the adopter regular updates about the pet?
+              </li>
+              <li>
+                <p class="color">  Break POV into pieces</p>: HMW consider the medical requirements of the pet?HMW keep them safe and aligned with covid protocols?
+              </li>
+        
+          
+         
+        
+         
+        </ol>
+      
+          </div>
+      </div>
+      <div id="Competitive-analysis" class="subgroup">
+        <h3>Competitive Analysis</h3>
+        <h5>I conducted a competitive analysis as the next step.It was divided into two parts where I conduct an <mark class="adore">audit</mark> and make a crisp <mark class="adore">report</mark> for that.</h5>
+        <h5>The competitive audit was conducted on the terms of the <mark class="adore">visual design, content, interaction, accessibility</mark>, and <mark class="adore">user flow</mark>.The brand's unique value proposition was also noticed.
+          </h5>
+        <br><br>
+        <img class="img-responsive" src="img/adore/photos/competitive audit.svg">
+        <h5><mark class="adore">Petfinder</mark> and <mark class="adore">Adopt a pet</mark> are the two designs I went through for the report.Both of them are <mark class="adore">direct competitor</mark>s are had pretty good designs.This step was of utmost importance because I got to see the basic framework and flows of these two designs.The mistakes could be neglected and better features could be inculcated in my design making Adore better.</h5>
+        <br><br>
+        
+<h5>The competitive analysis was conducted in two stages.In the first step,the companies were <mark class="adore">individually audited and then a <mark class="adore">cumulative audit report</mark> was generated.The report had <mark class="adore">concise points and findings relating to the features of their design.</mark></h5>
+<br><br>
+        <p class="p-center-wrapper">
+          <a href="img/adore/pdfs/Adore Competitive Audit Report .pdf" target="_blank"><button class="btn black-button" id='inner' name="button"> VIEW COMPETITIVE AUDIT REPORT</button></a></p>
+      </div>
+      <div id="Value-Proposition" class="subgroup">
+        <h3>Value Proposition</h3>
+       <h5>The value proposition was conducted keeping all the perspectives and required features in mind.We took <mark class="adore">first timers and frequent adopters all on the scale in mind</mark>.The value proposition <mark class="adore">highlights features of the design and how have we gone about them.</mark></h5>
+        <img class="img-responsive" src="img/adore/photos/value proposition.svg">
+        <h5>This is one pf the most crucial parts of the design as it sets the features and parts on the design I have to work on.It was properly chartered and made my work easier with the basic user flows and information architecture.</h5>
+      </div>
+      
+      <br><br>
+      <div id="Information-architecture" class="subgroup">
+        <h3>Information architecture</h3>
+        <h5>The <mark class="adore">information architecture</mark> forms a <mark class="adore">good backbone</mark> when proceeding to build wireframes or a low fidelity prototype.</h5>
+        <h5>It gives my whole mockup plan a structure.It also makes it easier for me to wireframe according to it and simplifes the user flows.</h5>
+        <h5>For creating the information architecture,I worked along the lines of five major sections of the designs.</h5>
+        <img class="img-responsive" src="img/adore/photos/basic ideation.jpg">
+        <h5>Then I proceeded on <mark class="adore">developing features</mark> of these sections.I explored various options to put in each categories and only the necessary ones were chosen.An excess of options could confuse the user and increase the complexity of decisions or options chosen.</h5>
+        <h5>The final information architecture of Adore can be seen below:</h5>
+        <img class="img-responsive" src="img/adore/photos/ia.jpg">
+      </div>
+     
+    </section>
+    <section id="Design" class="group">
+      <h2>DESIGN</h2>
+      <hr>
+      <div id="Sketches-and-Wireframe" class="subgroup">
+        <h3>Sketches and Wireframes</h3>
+        <h5>Based on the information architecture and the basic user flow,I proceeded to draw free hand.</h5>    
+          <h5>
+            For this design,I used the <mark class="adore">responsive web design</mark>.I started sketching the paper wireframes for my website initially before moving on to the mobile layout.</h5>
+            <h5>
+              Adore is a project which will be a <mark class="adore">responsive web design</mark> with a <mark class="adore">dedicated mobile app</mark>.
+            </h5>
+            <h5>
+              The approach that I took for sketching wireframes is also called the <mark class="adore">top down approach</mark>.In this approach,I start <mark class="adore">designing for a bigger screen sizes(laptop and tablets) before moving on to the smaller screen sizes(mobile phones)</mark>.              </h5>
+           
+          <h5>The paper wireframes of the design can be seen below.</h5>
+           
+
+          <br><br>
+        <img class="img-responsive" src="img/adore/photos/web wireframe 1.jpg">
+        <br><br>
+        <img class="img-responsive" src="img/adore/photos/web wireframe 2.jpg">
+        <br><br>
+        <img class="img-responsive" src="img/adore/photos/mob wireframe.jpg">
+<h5></h5>
+      </div>
+      
+      <div id="Prototyping" class="subgroup">
+        <h3>Prototyping</h3>
+        <h5>As the first step,I <mark class="adore">converted the paper wireframes to digital wireframes</mark>.
+<br>
+Since the design is supposed to be responsive,<mark class="adore">two different wireframes were created according to the device</mark>.This model then went for testing before increasing the fidelity.
+<br>
+I like to <mark class="adore">check the usability of the design</mark> with the low fidelity prototype itself as it <mark class="adore">helps user focus on the basic user flows and navigation flows more accurately</mark>.With colour or style,it may be aesthetically pleasing but it doesn't guarantee true reviews about the usability.
+<br>
+This is done keeping the <mark class="adore">aesthetic usability effect</mark> in mind.
+This effect is again used when colours,patterns and styles are added to make sure the colours are pleasant enough to overlook a few usability concerns.
+<br>
+
+        </h5>
+        <img class="img-responsive" src="img/adore/photos/digital wireframes.svg">
+      </div>
+
+      
+      <div id="Low-to-High-Fidelity" class="subgroup">
+        <h3>Low to high fidelity</h3>
+        <h5>There are two versions of the design,an app and a responsive website.This was done <mark class="adore">keeping the users in mind and how they would like to access the site.</mark> </h5>
+    <img class="img-responsive" src="img/adore/photos/design spec.svg">
+<h5>The major processes of the app and website are given below.<mark class="adore">The onboarding process and all the other user flow are some how developed from the value proposition</mark>. I can see the features in action which were planned in the value proposition.This is why that was such a crucial step.</h5>
+    <img class="img-responsive" src="img/adore/photos/main features showcase.svg">
+    <h5>The major colours and styles inculcated are shown below.I chose <mark class="adore">warm colours</mark> mainly <mark class="adore">autumn tones</mark> because of their <mark class="adore">welcoming nature</mark>.I wanted the design to be bright and warm and have neutral tones that <mark class="adore">invite users to check out Adore.</mark></h5>
+    <img class="img-responsive" src="img/adore/photos/sticker-sheet-adore.svg">
+    <h5>The low fidelity prototype can be viewd by clicking the button given below:</h5>
+
+
+         
+
+<p class="p-center-wrapper">
+<a href="https://xd.adobe.com/view/bcb5b5dc-3518-4650-90e1-98855a5af4c8-e9e6/" target="_blank">
+  <button class="btn black-button" name="button"> VIEW LOW FIDELITY PROTOTYPE</button>
+  
+</a>
+</p> 
+      </div>
+    </section>
+   
+    
+    <section id="Evaluations-and-Iterations" class="group">
+      <h2>EVALUATIONS AND ITERATIONS</h2>
+      <hr>
+    
+      <div id="User-Testing-Process" class="subgroup">
+        <h3>User Testing Process</h3>
+        <h5>The user testing process was initiated by a <mark class="adore">user research report</mark> which described how the research was supposed to take place and how to go about the testing in order of the activities.
+<br>
+Some of the major design goals are highlighted below:
+
+        </h5>
+    <img class="img-responsive" src="img/adore/photos/design goals.svg">
+    <h5>Another part of the report was how to <mark class="adore">measure the usability and the efficiency of the design</mark> when the participants of the study are assigned tasks.
+      <mark class="adore">Key Performance indicators or KPIs</mark> are listed below which helped in identifying how the users are reacting to the designs and what actions are they taking.<mark class="adore">Their user flows were documented in the process and analysed later</mark>.This was an important step in <mark class="adore">identifying how the design is being used</mark> and <mark class="adore">how much does it match to the user's mental model</mark>.
+
+    </h5>
+    <img class="img-responsive" src="img/adore/photos/kpi.svg">
+      </div> 
+
+      <div id="Results" class="subgroup">
+        <h3>Results</h3>
+        <h5>After the report and script was ready,the participant user study was conducted smoothly.The participants were chosen from <mark class="adore">different age groups</mark> and that <mark class="adore">helped hugely in identifying the differnet user flows one could take</mark> or the <mark class="adore">roadblocks faced by the participants</mark>.
+<br>
+<mark class="adore"> Four participants</mark> helped me in the usability testing phase.They were allowed to <mark class="adore">browse through</mark> for a while and then were <mark class="adore">assigned basic tasks</mark>.
+<br>
+          
+        </h5>
+        <h5>
+          The performance of the design is demonstrated in the charts below where you can see in which places the design did not work and what the users expected in place of them.From this basic insights were derived which is basically where I have to iterate the design.
+
+        </h5>
+    <img class="img-responsive" src="img/adore/photos/slightly sure.svg">
+    <h5></h5>
+    <img class="img-responsive" src="img/adore/photos/confused.svg">
+    <h5></h5>
+    <img class="img-responsive" src="img/adore/photos/confident.svg">
+
+        
+      </div>
+      <div id="Feedback-and-Design-Iterations" class="subgroup">
+        <h5>After finding common patterns in the results of the testing phase,<mark class="adore">they were grouped together to form insights</mark> which I have to further work on.The insights were <mark class="adore"></mark>prioritised according to their position in the user flows</mark> and the iteration was followed through.
+        <br>
+      Given below is an <mark class="adore">affinity diagram</mark> of the insights gathered.</h5>
+        <img class="img-responsive" src="img/adore/photos/Quick Retrospective (2).jpg">
+        <h5>After making changes in the low and high fidelity prototype,the final design is ready to view below.</h5>
+
+      </div>
+    </section>
+    
+    <section id="Latest-Prototype" class="group">
+      <h2>LATEST PROTOTYPE</h2>
+      <hr>
+     
+      <h5> Here's the latest prototype with the iterations inculcated.<br>
+        Further changes to the design based on user feedback will be posted soon.</h5>
+
+        <iframe width="1920" height="1080" src="https://xd.adobe.com/embed/9ad8107d-77a0-4174-94d3-a9d462389088-cf8b/?fullscreen&hints=off" frameborder="0" allowfullscreen></iframe>
+      
+    </section>
+   
+
+    <section id="Accessibility" class="group">
+      <h2>ACCESSIBILITY</h2>
+      <hr>
+      <div id="" class="subgroup">
+        <h5>Accessibility is something I wanted to actively include in my project.I include it in ways possible and expand on those in the further iterations.</h5>
+        <h5>Below mentioned are some ways I tried to make this porject accessible.</h5>
+      
+    <img class="img-responsive" src="img/adore/photos/accessibility.svg">
+
+        
+      </div>
+    </section>
+    
+    
+    
+    <section id="Future-steps" class="group">
+      <h2>FUTURE STEPS</h2>
+      <hr>
+      <div id="Step1" class="subgroup">
+        <h5>These are some of the <mark class="adore">main agendas</mark> I plan to work on later in the rpojecat.The <mark class="adore">future possibilities of Adore</mark> are described below</h5>
+    <img class="img-responsive" src="img/adore/photos/future.svg">
+    <img class="img-responsive" src="img/adore/photos/future2.svg">
+    <img class="img-responsive" src="img/adore/photos/future3.svg">
+
+
+        
+      
+        
+       
+      </div>
+    </section>
+    
+   
+  </div>
 </div>
-<div class="foot">
+  
+ 
+  
+<!-- mobile ver ends -->
+
+
+
+
+  <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+  <section id="GroupH" class="group">
+      <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h7>
+          <a class="hvr-underline" href="index.html" >All</a> /
+          <a class="hvr-underline" href="vera.html">Vera</a> /
+          <a class="selected-footer" href="">Adore</a> /
+          <a class="hvr-underline" href="">CookeAsy</a> 
+        </h7>
+        </div>
+      </section>
+
+  <!-- footer -->
+  <div class="foot">
     <div class="container-fluid ">
       <div class="row footer-row">
         <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -682,9 +1000,11 @@
         <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <p>
             <a href="https://dribbble.com/Rio_97" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
             <a href="https://medium.com/@Rio_97" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
-            <a href="mailto:pillaidikshita97@gmail.com" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:pillaidikshita97@gmail.com" target="_blank">
+              <!-- <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> -->
+              <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
+            </a>
           </p>
           <br>
           <p class="footer-text-small">Dikshita Pillai © 2022 All Rights Reserved</p>
@@ -693,4 +1013,9 @@
       </div>
     </div>
   </div>
-  </body>
+
+  <!-- footer end -->
+<!-- end of the page -->
+</body>
+
+</html>
